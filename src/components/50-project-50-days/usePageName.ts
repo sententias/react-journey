@@ -16,27 +16,38 @@ import RandomChoicePicker from './RandomChoicePicker.tsx';
 import AnimatedNavigation from './AnimatedNavigation.tsx';
 import IncrementingCounter from './IncrementingCounter.tsx';
 import DrinkWater from './DrinkWater.tsx';
+import MovieApp from './MovieApp.tsx';
+import BackgroundSlider from './BackgroundSlider.tsx';
+import ThemeClock from './ThemeClock.tsx';
+import ToggleSwitch from '../widgets/ToggleSwitch.tsx';
+import ButtonRippleEffect from './ButtonRippleEffect.tsx';
+import DragNDrop from './DragNDrop.tsx';
 
 export function usePageNames() {
   // 使用 useMemo 来缓存页面信息，避免不必要的重新计算
   const pageNames = useMemo(() => [
-    { name: 'ExpandingCard',cname: '扩展卡片', path: '/day1', component: ExpandingCard },
-    { name: 'ProgressStep',cname: '步骤进度条', path: '/day2', component: ProgressStep },
-    { name: 'RotatingNavigationAnimation',cname: '旋转导航动画', path: '/day3', component: RotatingNavigationAnimation },
-    { name: 'HiddenSarch',cname: '隐藏式搜索栏', path: '/day4', component: HiddenSarch },
-    { name: 'BlurryLoading',cname: '模糊加载', path: '/day5', component: BlurryLoading },
-    { name: 'ScrollAnimation',cname: '页面滚动动画', path: '/day6', component: ScrollAnimation },
-    { name: 'SplitLandingPage',cname: '分割选择页面', path: '/day7', component: SplitLandingPage },
-    { name: 'FormInputWave',cname: '海浪输入栏', path: '/day8', component: FormInputWave },
-    { name: 'SoundBoard',cname: '音乐点击器', path: '/day9', component: SoundBoard },
-    { name: 'DadJokes',cname: '随机笑话', path: '/day10', component: DadJokes },
-    { name: 'EventKeycodes',cname: '键盘点击事件', path: '/day11', component: EventKeycodes },
-    { name: 'FaqCollapse',cname: '问答折叠卡片', path: '/day12', component: FaqCollapse },
-    { name: 'RandomChoicePicker',cname: '选择决策器', path: '/day13', component: RandomChoicePicker },
-    { name: 'AnimatedNavigation',cname: '导航栏动画', path: '/day14', component: AnimatedNavigation },
-    { name: 'IncrementingCounter',cname: '增长计数器', path: '/day15', component: IncrementingCounter },
-    { name: 'DrinkWater',cname: '每日水计量', path: '/day16', component: DrinkWater },
-    { name: 'Test',cname: '', path: '/test', component: Test },
+    { name: 'ExpandingCard',cName: '扩展卡片', path: '/day1', component: ExpandingCard },
+    { name: 'ProgressStep',cName: '步骤进度条', path: '/day2', component: ProgressStep },
+    { name: 'RotatingNavigationAnimation',cName: '旋转导航动画', path: '/day3', component: RotatingNavigationAnimation },
+    { name: 'HiddenSarch',cName: '隐藏式搜索栏', path: '/day4', component: HiddenSarch },
+    { name: 'BlurryLoading',cName: '模糊加载', path: '/day5', component: BlurryLoading },
+    { name: 'ScrollAnimation',cName: '页面滚动动画', path: '/day6', component: ScrollAnimation },
+    { name: 'SplitLandingPage',cName: '分割选择页面', path: '/day7', component: SplitLandingPage },
+    { name: 'FormInputWave',cName: '海浪输入栏', path: '/day8', component: FormInputWave },
+    { name: 'SoundBoard',cName: '音乐点击器', path: '/day9', component: SoundBoard },
+    { name: 'DadJokes',cName: '随机笑话', path: '/day10', component: DadJokes },
+    { name: 'EventKeycodes',cName: '键盘点击事件', path: '/day11', component: EventKeycodes },
+    { name: 'FaqCollapse',cName: '问答折叠卡片', path: '/day12', component: FaqCollapse },
+    { name: 'RandomChoicePicker',cName: '选择决策器', path: '/day13', component: RandomChoicePicker },
+    { name: 'AnimatedNavigation',cName: '导航栏动画', path: '/day14', component: AnimatedNavigation },
+    { name: 'IncrementingCounter',cName: '增长计数器', path: '/day15', component: IncrementingCounter },
+    { name: 'DrinkWater',cName: '每日水计量', path: '/day16', component: DrinkWater },
+    { name: 'MovieApp',cName: '电影软件', path: '/day17', component: MovieApp },
+    { name: 'BackgroundSlider',cName: '背景滑动条', path: '/day18', component: BackgroundSlider },
+    { name: 'ThemeClock',cName: '主题时钟', path: '/day19', component: ThemeClock },
+    { name: 'ButtonRippleEffect',cName: '按钮涟漪效果', path: '/day20', component: ButtonRippleEffect },
+    { name: 'DragNDrop',cName: '拖拽组件', path: '/day21', component: DragNDrop },
+    { name: 'Test',cName: '', path: '/test', component: Test },
   ], []) // 依赖数组为空表示此 memoized 值只会在组件挂载和卸载时计算
 
   return pageNames
