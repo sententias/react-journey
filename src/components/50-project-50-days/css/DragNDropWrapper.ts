@@ -9,6 +9,7 @@ const DragNDropWrapper = styled.div<{$box_number: number}>`
     width: 8vw;
     height: 12vh;
     position: relative;
+    user-select: none;
   }
 
   .img {
@@ -17,6 +18,7 @@ const DragNDropWrapper = styled.div<{$box_number: number}>`
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
   }
 
 `

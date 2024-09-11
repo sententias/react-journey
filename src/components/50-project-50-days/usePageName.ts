@@ -26,6 +26,9 @@ import DrawingApp from './DrawingApp.tsx';
 import KineticLoader from './KineticLoader.tsx';
 import ContentPlaceholder from './ContentPlaceholder.tsx';
 import StickyNavigation from './StickyNavigation.tsx';
+import DoubleVerticalSlider from './DoubleVerticalSlider.tsx';
+import ToastNotification from './ToastNotification.tsx';
+import GithubProfiles from './GithubProfiles.tsx';
 
 export function usePageNames() {
   // 使用 useMemo 来缓存页面信息，避免不必要的重新计算
@@ -55,7 +58,10 @@ export function usePageNames() {
     { name: 'KineticLoader',cName: '加载动画', path: '/day23', component: KineticLoader },
     { name: 'ContentPlaceholder',cName: '内容占位符', path: '/day24', component: ContentPlaceholder },
     { name: 'StickyNavigation',cName: '粘性导航栏', path: '/day25', component: StickyNavigation },
-    { name: 'Test',cName: '', path: '/test', component: Test },
+    { name: 'DoubleVerticalSlider',cName: '双纵向滑动窗口', path: '/day26', component: DoubleVerticalSlider },
+    { name: 'ToastNotification',cName: '弹框通知', path: '/day27', component: ToastNotification },
+    { name: 'GithubProfiles',cName: 'github用户查询', path: '/day28', component: GithubProfiles },
+    { name: 'Test',cName: '测试页面', path: '/test', component: Test },
   ], []) // 依赖数组为空表示此 memoized 值只会在组件挂载和卸载时计算
 
   return pageNames

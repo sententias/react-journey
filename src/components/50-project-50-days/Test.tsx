@@ -1,46 +1,72 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Fragment, useRef } from 'react'
 import styled from 'styled-components'
+import axios, { AxiosResponse } from 'axios'
 
 const Test = () => {
+  const [data, setData] = useState<any>([])
+
+  const provinceRef = useRef<HTMLInputElement>(null)
+  const cityRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    // // axios
+    // axios({
+    //   url: 'http://hmajax.itheima.net/api/register',
+    //   method: 'post',
+    //   data: {
+    //     username: 'itheima007',
+    //     password: '1221334'
+    //   }
+    // })
+    //   .then((res) => {
+    //     console.log(res)
+    //     setData(res.data.list)
+    //   })
+    //   .catch((err) => {
+    //     console.log(err)
+    //     // alert(err.response.data.message)
+    //   })
+
+    // XHR(XMLHttpRequest)
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET','https://api.github.com/users/111')
+    // xhr.open('GET', 'http://hmajax.itheima.net/api/news')
+    xhr.addEventListener('loadend', (res) => {
+      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+        const data = JSON.parse(xhr.responseText)
+        console.log('res:',res)
+        console.log('Data:', data)
+        setData(data)
+      } else {
+        console.error('Request failed with status:', xhr.status)
+      }
+    })
+    xhr.send()
+  }, [])
+
   return (
     <TestWrapper>
-      <div className='content'>
-        {false ? (
-          <div>please wait...</div>
-        ) : (
-          <div className='holder-animation'></div>
-        )}
-      </div>
+      查询用户
+      <input type='text' />
+      <p>{data.id}</p>
     </TestWrapper>
   )
 }
 
 const TestWrapper = styled.div`
-  .content {
-    width: 100px;
-    height: 100px;
-    background-color: skyblue;
-  }
-  @keyframes bgPos {
-    0% {
-      background-position: 50% 0;
-    }
-    100% {
-      background-position: -150% 0;
-    }
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+
+  h1 {
+    font-size: 1.5rem;
+    color: #333;
   }
 
-  .holder-animation {
-    background-image: linear-gradient(
-      to right,
-      #f6f7f8 0%,
-      #edeef1 10%,
-      #f6f7f8 20%,
-      #f6f7f8 100%
-    );
-    background-size: 200% 100%;
-    animation: bgPos 1s linear infinite;
-    inset: 0;
+  p {
+    font-size: 1rem;
+    color: #666;
   }
 `
 

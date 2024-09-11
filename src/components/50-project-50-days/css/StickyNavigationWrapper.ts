@@ -81,6 +81,11 @@ const StickyNavigationWrapper = styled.div<{$isScrolled: boolean}>`
     flex-direction: row;
     gap: 1rem;
   }
+
+  .main-content {
+    padding:0 1rem;
+    box-sizing:border-box;
+  }
 `
 
 export default StickyNavigationWrapper

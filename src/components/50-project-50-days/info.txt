@@ -115,12 +115,41 @@ DragNDrop:
 DrawingApp:
   画出来的线段不跟手，尝试自己指定x,y的坐标，发现x,y坐标很小的情况下线却在偏右下,在canvas的左上角画图，发现线段有偏移
   发现问题在于我通过vw和vh动态设置了canvas元素的宽高，但canvas实际的宽高却没有动态改变,将canvas的width和height设置为他自己的clientHeight和clientWidth解决问题
-  console.dir()能够对HTMLElement元素的属性进行展开
+  console.dir()能够对HTMLElement元素的属性进行展开。
 
 KineticLoader:
-  注意动画顺序，一开始把animation-delay写在前一个元素上导致动画很怪
+  注意动画顺序，一开始把animation-delay写在前一个元素上导致动画很怪。
 
 ContentPlaceholder:
-  完成了基本效果但不够满意，思考怎么让一个遮罩组件能完全遮盖父元素且不需要使用relative这种定位
+  完成了基本效果但不够满意，思考怎么让一个遮罩组件能完全遮盖父元素且不需要使用relative这种定位。
 
 StickyNavigation:
+  主要是CSS的使用。
+
+DoubleVerticalSlider:
+  如果想让伪元素显示在父元素的下方，设置伪元素z-index为-1。
+  https://fatesinger.com/100258
+    同一个层叠上下文里面, 层叠顺序从后向前依次是: 背景和边框、负z-index、块级盒、浮动盒、行内盒、z-index:0、正z-index.
+    伪元素相当于子元素，也就是包含在元素内的，二者不在同一个层叠上下文中。
+    如果想实现层叠效果，需要元素和对应的伪元素在同一层叠上下文中，所以不能让元素创建层叠上下文。以下情况会创建层叠上下文
+
+    即便是 position 不为 static 的元素, 如果没有指定一个非 auto 值的 z-index, 该元素就不会建立一个层叠上下文。
+    元素的transform值不是none。
+
+ToastNotification:
+  复习了fixed布局。
+  复习了TS如何限制指定字符串为参数。
+  在react中使用let定义的变量，改变变量可能出现变量实际更新不及时的现象。
+  考虑将toast封装为一个函数方便调用而不是一个组件。
+    第一版直接将组件通过ReactDOM.createroot.render的方法将组件渲染进去，导致原本渲染的组件全部丢失。
+      查找了资料发现react不支持追加渲染，也就是说如果我想使用render的话，我就需要将原本的render获取到并渲染，那这和Provier包裹好像没什么区别。
+    思考了一下，也就是说如果我想实现这个Toast功能，有以下方法:
+      1.使用Provider提供上下文支持 => 不想采用，这样太重了，不能随插随用。
+      2.使用<Toast>组件，并且将Toast组件的方法暴露出来以供调用。
+      3.使用原生js实现。
+    还是Toast组件比较适合。
+
+
+GithubProfiles:
+  在React开发环境中，如果使用了严格模式，useEffect会执行两次。
+  学习了axios，复习了promise。
