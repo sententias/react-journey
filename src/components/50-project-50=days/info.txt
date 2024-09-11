@@ -1,0 +1,20 @@
+ExpandingCard:
+  第一个小项目，在这之前学习了京东的react项目结构和代码规范，webpack打包导入文件时可以通过设置来忽略导入的文件的后缀，但是通过CRA构建的react项目，webpack的配置文件时隐藏的，需要通过指令来将配置文件导出。
+  学习了react-router v6的用法，需要通过指令安装对应依赖npm install react-router-dom@6，在根目录使用BrowserRouter元素将根元素包裹（react-router官网有新的使用方式RouterProvider，但是网上没有很多教程应该是新出的，不采用），使用<routers>和<router>标签设置路由导出位置，<Link>标签用于改变路由地址，它会被渲染成a标签。
+  通过fetch来在线获取图片资源并加载，本来是使用img标签，但是本项目是伸缩卡片，需要图片根据元素的大小和位置来展示对应的部分，发现img不能实现理想中的效果，于是想到了精灵图的原理，给元素设置背景图。由于使用了styled-components所以不知道怎么设置background的url，查到资料发现styled-components就是react组件，可以传递参数，但是最后采用了内联css样式的方式来实现设置背景图片的url。内联样式不会因为styled-components导入样式而被抛弃。
+
+ProgressStep：
+  第二个项目，想使用jsx语法来动态生成step个数，但是有一个问题，就是圆形和进度条应该是交错出现的，由于父元素使用了flex布局，我想通过对进度条设置flex：1属性来填充圆形剩下的部分，但是react渲染的元素只能存在一个根元素，导致不能很好地实现需求，由于再嵌套一层div不够优雅，于是使用了Fragment作为根元素实现了需求。并且由于jsx的返回值也只能存在一个根元素，同样使用了Fragment解决问题。
+  由于进度条个数是step个数-1，使用index < stepNumberArrays.length - 1 && (ReactDom)较为优雅地解决了问题。
+
+RotatingNavigationAnimation：
+  动画效果很难写，但是基本实现了功能。学习了vh和vw视窗单位，由于父元素使用了flex布局，设置了居中对齐方式，而我的高度设置的超过100vh，导致内容有一部分超过了屏幕范围，设置了align-self解决了问题。
+  由于之前使用styled-components是通过HOC高阶组件实现的对元素的包裹，但是这种方式无法对styled传递组件中的state参数，于是改变了使用方法，将styled元素直接作为render的return的根元素。
+  值得注意的是给styled组件传递state参数的时候，如果参数是boolean类型，styled组件好像识别不出来，使用toString()方法将boolean类型转为字符串后正常使用。
+  
+HiddenSarch：
+  使用了阿里巴巴矢量组件库，动态导入了link标签，但是出现的是小方格，本来以为是下载字体文件需要时间，在下载字体的时候页面就渲染出来了，尝试添加监听，出现了错误OTS parsing error: invalid sfntVersion: 1080455022，尝试设置定时器，发现不是猜想的问题，尝试使用styled-component全局样式，失败，最后发现是需要两个class类，一个是iconfont，一个是图标的类型。
+  还遇到一个问题就是我将input的width设为0后他还是有宽度，后来在控制台发现input有默认的样式padding，以后有问题要多用控制台。
+
+Loading：
+  中间做的一个小页面，用于未加载完成时的遮罩，学到了cra创建的项目要读取本地文件时需要放在public文件夹下
