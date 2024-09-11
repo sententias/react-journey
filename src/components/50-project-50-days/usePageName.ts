@@ -19,7 +19,6 @@ import DrinkWater from './DrinkWater.tsx';
 import MovieApp from './MovieApp.tsx';
 import BackgroundSlider from './BackgroundSlider.tsx';
 import ThemeClock from './ThemeClock.tsx';
-import ToggleSwitch from '../widgets/ToggleSwitch.tsx';
 import ButtonRippleEffect from './ButtonRippleEffect.tsx';
 import DragNDrop from './DragNDrop.tsx';
 import DrawingApp from './DrawingApp.tsx';
@@ -29,6 +28,27 @@ import StickyNavigation from './StickyNavigation.tsx';
 import DoubleVerticalSlider from './DoubleVerticalSlider.tsx';
 import ToastNotification from './ToastNotification.tsx';
 import GithubProfiles from './GithubProfiles.tsx';
+import DoubleClickHeart from './DoubleClickHeart.tsx';
+import AutoTextEffect from './AutoTextEffect.tsx';
+import PasswordGenerator from './PasswordGenerator.tsx';
+import GoodCheapFast from './GoodCheapFast.tsx';
+import NotesApp from './NotesApp.tsx';
+import AnimatedCountdown from './AnimatedCountdown.tsx';
+import ImageCarousel from './ImageCarousel.tsx';
+import Hoverboard from './Hoverboard.tsx';
+import Pokedex from './Pokedex.tsx';
+import MobileTabNavigation from './MobileTabNavigation.tsx';
+import PasswordStrengthBackground from './PasswordStrengthBackground.tsx';
+import ThirdBackgroundBoxes from './ThirdBackgroundBoxes.tsx';
+import VerifyAccountUi from './VerifyAccountUi.tsx';
+import LiveUserFilter from './LiveUserFilter.tsx';
+import FeedbackUiFesign from './FeedbackUiFesign.tsx';
+import CustomRangeSlider from './CustomRangeSlider.tsx';
+import NetflixMobileNavigation from './NetflixMobileNavigation.tsx';
+import QuizApp from './QuizApp.tsx';
+import TestimonialBoxSwitcher from './TestimonialBoxSwitcher.tsx';
+import RandomImageGenerator from './RandomImageGenerator.tsx';
+import TodoList from './TodoList.tsx';
 
 export function usePageNames() {
   // 使用 useMemo 来缓存页面信息，避免不必要的重新计算
@@ -61,6 +81,27 @@ export function usePageNames() {
     { name: 'DoubleVerticalSlider',cName: '双纵向滑动窗口', path: '/day26', component: DoubleVerticalSlider },
     { name: 'ToastNotification',cName: '弹框通知', path: '/day27', component: ToastNotification },
     { name: 'GithubProfiles',cName: 'github用户查询', path: '/day28', component: GithubProfiles },
+    { name: 'DoubleClickHeart',cName: '双击喜欢', path: '/day29', component: DoubleClickHeart },
+    { name: 'AutoTextEffect',cName: '文本走马灯', path: '/day30', component: AutoTextEffect },
+    { name: 'PasswordGenerator',cName: '密码生成器', path: '/day31', component: PasswordGenerator },
+    { name: 'GoodCheapFast',cName: '不可能三角', path: '/day32', component: GoodCheapFast },
+    { name: 'NotesApp',cName: '笔记应用', path: '/day33', component: NotesApp },
+    { name: 'AnimatedCountdown',cName: '动画倒计时', path: '/day34', component: AnimatedCountdown },
+    { name: 'ImageCarousel',cName: '图片幻灯片', path: '/day35', component: ImageCarousel },
+    { name: 'Hoverboard',cName: '悬浮颜色板', path: '/day36', component: Hoverboard },
+    { name: 'Pokedex',cName: '宝可梦图鉴', path: '/day37', component: Pokedex },
+    { name: 'MobileTabNavigation',cName: '手机导航栏', path: '/day38', component: MobileTabNavigation },
+    { name: 'PasswordStrengthBackground',cName: '密码强度背景', path: '/day39', component: PasswordStrengthBackground },
+    { name: 'ThirdBackgroundBoxes',cName: '3d背景盒子', path: '/day40', component: ThirdBackgroundBoxes },
+    { name: 'VerifyAccountUi',cName: '用户认证界面', path: '/day41', component: VerifyAccountUi },
+    { name: 'LiveUserFilter',cName: '在线用户过滤', path: '/day42', component: LiveUserFilter },
+    { name: 'FeedbackUiFesign',cName: '反馈界面', path: '/day43', component: FeedbackUiFesign },
+    { name: 'CustomRangeSlider',cName: '范围滑块', path: '/day44', component: CustomRangeSlider },
+    { name: 'NetflixMobileNavigation',cName: '移动导航栏', path: '/day45', component: NetflixMobileNavigation },
+    { name: 'QuizApp',cName: '问答应用', path: '/day46', component: QuizApp },
+    { name: 'TestimonialBoxSwitcher',cName: '评价框切换器', path: '/day47', component: TestimonialBoxSwitcher },
+    { name: 'RandomImageGenerator',cName: '随机图片生成', path: '/day48', component: RandomImageGenerator },
+    { name: 'TodoList',cName: '待办事项', path: '/day49', component: TodoList },
     { name: 'Test',cName: '测试页面', path: '/test', component: Test },
   ], []) // 依赖数组为空表示此 memoized 值只会在组件挂载和卸载时计算
 

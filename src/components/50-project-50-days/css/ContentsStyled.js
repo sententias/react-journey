@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const ContentsWrapper = styled.div`
+
   .nav2fbox {
     margin-left: 200px;
     display: flex;

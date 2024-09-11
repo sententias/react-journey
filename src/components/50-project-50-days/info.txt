@@ -153,3 +153,80 @@ ToastNotification:
 GithubProfiles:
   在React开发环境中，如果使用了严格模式，useEffect会执行两次。
   学习了axios，复习了promise。
+
+DoubleClickHeart:
+  和之前的涟漪按钮一样。
+  尝试优化为激活后不跟着鼠标走...
+
+AutoTextEffect:
+  定时器的基础运用。
+  复习了input元素。
+
+PasswordGenerator:
+  双向绑定（value + onChange）。
+  navigator.clipboard.writeText写入剪切板。
+
+GoodCheapFast:
+  主要难点在于滑动开关的设计。
+
+NotesApp:
+  决定以后写代码还是加上分号，因为cra创建的原生代码都是加了分号的，就是用了一段时间无分号后感觉有分号风格有点丑。
+  注意一下map的key，是唯一标识符，应该在重新渲染时保持不变。
+  可以使用`margin-right: auto;`实现flex布局下类似justify-self的操作。
+
+AnimatedCountdown:
+  功能实现了，但代码写的很不优雅，后期想办法优化一下。
+
+ImageCarousel:
+  考虑到不能让用户手动切换图片后，由于定时器时间到了又导致图片切换，使用useEffect监听activeIndex属性，保证每次切换图片后都重新设置定时器。
+
+Hoverboard:
+  memo和PureComponent类似，只有在组件的props改变时才会重新渲染组件。
+  usememo则主要用于减少函数组件内重复的复杂计算，和vue的computed类似，useMemo 依赖于传递给它的依赖数组，当依赖项发生变化时，它会重新计算缓存值。
+
+Pokedex:
+  复习了axios。
+  研究了pokeapi的官方api文档https://pokeapi.co/docs/v2。
+  目前有个问题是如果图片没加载完成，那么一个元素都不会渲染，后期想办法改正，暂且先使用本地图片代替。
+
+MobileTabNavigation:
+  使用transform实现。
+  
+PasswordStrengthBackground:
+  使用定位布局将一个div作为背景，通过conic-gradient径向渐变实现类似进度条的效果。
+  由于filter:blur()对所有子元素也生效，通过伪元素来实现背景模糊的效果，background: inherit;可以直接继承父元素的背景。
+
+3dBackgroundBoxes:
+  暂时没实现，由于要和精灵图一样定位背景元素的位置，有点麻烦。
+
+VerifyAccountUi:
+  使用inputtype=text和maxlength限制每个框只能输入一个字符，通过双向绑定和正则表达式保证输入框只能输入数字，
+  并且当输入完数字后会自动focus到下一个输入框中，backspace逻辑一致。
+
+LiveUserFilter:
+  使用filter过滤在线用户，值得注意的是，需要保留原用户的数据，不能使用上一次的数据进行过滤，否则原本用户数据会丢失。
+
+FeedbackUiFesign:
+  只实现了本组件间的数据传递，其实也可以通过props或者其他方法进行组件间的数据传递。
+
+CustomRangeSlider:
+  通过定位布局实现滑动条和上方文本对应。
+
+NetflixMobileNavigation:
+  为了实现先进后出的动画效果，给元素自身和active类设置相反的duration-delay时间，由于进入时存在active类名，移出时不存在active类名，实现需求的动画效果。
+
+QuizApp:
+  通过动态渲染实现。
+
+TestimonialBoxSwitcher:
+  如果CSS动画设置为infinite，虽然和js定时器的DRURATION一致，但由于两者分开计时，有可能出现不同步的情况，因此每次index更新时重新渲染progress-bar，解决问题
+
+RandomImageGenerator：
+  通过调用接口实现。
+
+TodoList:
+  CSS写了很久，但还是不好看。
+  鼠标左键点击事件和右键点击事件不同。
+
+InsectCatchGame:
+  暂时没实现，思路很简单，就是给i元素一个随机的transform，并且onclick的时候移除自身，增加i元素的数量。
