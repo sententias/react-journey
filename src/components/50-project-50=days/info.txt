@@ -41,3 +41,15 @@ FormInputWave:
   小技巧:string.split('')能将string变为字符数组。
   思考了一下感觉除了使用input的onfocus和onblur属性，还可以使用useEffect监听ref的value变化实现，不过好像没目前这个清晰
 
+SoundBoard:
+  复习了addEventListener。
+
+Dadjokes:
+  复习hooks知识点。
+
+EventKeycodes:
+  复习hooks知识点。
+
+FaqCollapse:
+  学习了grid布局。
+  在RotatingNavigationAnimation项目中得到的结论好像有错误，如果写好了ts类型接口还是能识别出来boolean值的。

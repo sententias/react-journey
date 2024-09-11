@@ -1,0 +1,30 @@
+{
+  "id": "4649080",
+  "name": "project",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "41498691",
+      "name": "mti-箭头下",
+      "font_class": "mti-jiantouxia",
+      "unicode": "e73d",
+      "unicode_decimal": 59197
+    },
+    {
+      "icon_id": "41498693",
+      "name": "mti-关闭",
+      "font_class": "mti-guanbi",
+      "unicode": "e73e",
+      "unicode_decimal": 59198
+    },
+    {
+      "icon_id": "17756828",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    }
+  ]
+}

@@ -7,6 +7,10 @@ const ContentsWrapper = styled.div`
     align-items: center;
     justify-content: center;
     height: 100vh;
+    
+    color: rgb(110,110,110);
+    font-size: 20px;
+    font-family: "Microsoft YaHei UI Light" 'JetBrains Mono';
   }
 `
 
