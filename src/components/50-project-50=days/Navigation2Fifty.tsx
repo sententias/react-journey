@@ -1,44 +1,18 @@
-import React, { PureComponent } from 'react'
-import { Link } from 'react-router-dom'
-import Navigation2FiftyWrapper from './css/Navigation2FiftyStyled.js'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Navigation2FiftyWrapper from './css/Navigation2FiftyStyled.js';
+import { usePageNames } from './usePageName.ts';
 
-interface Navigation2FiftyProps {}
+export const Navigation2Fifty = () => {
+  const pageNames = usePageNames()
+  const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
-interface Navigation2FiftyState {
-  pageNames: { name: string; path: string }[]
-  activeIndex: number | null
-}
-
-export class Navigation2Fifty extends PureComponent<
-  Navigation2FiftyProps,
-  Navigation2FiftyState
-> {
-  constructor(props: Navigation2FiftyProps) {
-    super(props)
-
-    this.state = {
-      pageNames: [
-        { name: 'ExpandingCard', path: '/day1' },
-        { name: 'ProgressStep', path: '/day2' },
-        { name: 'RotatingNavigationAnimation', path: '/day3' },
-        { name: 'HiddenSarch', path: '/day4' },
-        { name: 'BlurryLoading', path: '/day5'},
-        { name: 'ScrollAnimation', path: '/day6'},
-        { name: 'Test', path: '/test' },
-      ],
-      activeIndex: null
-    }
+  const handleClick = (index: number) => {
+    setActiveIndex(index)
   }
 
-  onClickActive = (index: number) => {
-    this.setState({
-      activeIndex: index
-    })
-  }
-
-  render() {
-    const { pageNames, activeIndex } = this.state
-    return (
+  return (
+    <Navigation2FiftyWrapper>
       <div className='nav2f'>
         <div className='nav-header'>
           <h2>目录</h2>
@@ -50,7 +24,7 @@ export class Navigation2Fifty extends PureComponent<
                 <Link
                   className={activeIndex === index ? 'isActive' : ''}
                   to={item.path}
-                  onClick={() => this.onClickActive(index)}
+                  onClick={() => handleClick(index)}
                 >
                   {item.name}
                 </Link>
@@ -59,18 +33,8 @@ export class Navigation2Fifty extends PureComponent<
           </ul>
         </nav>
       </div>
-    )
-  }
-}
-
-function withNavigation2FiftyWrapper(WrappedComponent: any) {
-  return (props: any) => (
-    <Navigation2FiftyWrapper>
-      <WrappedComponent {...props} />
     </Navigation2FiftyWrapper>
   )
 }
 
-const WrappedNavigation2Fifty = withNavigation2FiftyWrapper(Navigation2Fifty)
-
-export default WrappedNavigation2Fifty
+export default Navigation2Fifty
