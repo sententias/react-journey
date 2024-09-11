@@ -8,8 +8,12 @@ const Test = (props) => {
 
   return (
     <TestWrapped>
-      {mState}
-      <button onClick={() => set}>config</button>
+      <label>
+        <div>a</div>
+        <span>b</span>
+        <span>c</span>
+        <span>d</span>
+      </label>
     </TestWrapped>
   )
 }

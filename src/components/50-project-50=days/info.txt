@@ -29,4 +29,15 @@ ScrollAnimation:
   学习了IntersectionObserver接口，用于检验元素是否在视窗内。
   学习了keyframes关键字用于定义动画序列。
 
+SplitLandingPage:
+  比较简单。
+  在styled-components中支持通过&进行选择器的使用。
+  
+FormInputWave:
+  对span标签使用transform不生效，bug排查了半天，
+  首先怀疑是相对定位和绝对定位的问题，发现不是，然后怀疑label标签的问题，也不是，在控制台测了半天span标签一点不带动弹，
+  找到一个解释，将span标签设置为内联行元素解决问题。
+  https://www.cnblogs.com/fayin/p/9755590.html
+  小技巧:string.split('')能将string变为字符数组。
+  思考了一下感觉除了使用input的onfocus和onblur属性，还可以使用useEffect监听ref的value变化实现，不过好像没目前这个清晰
 

@@ -6,6 +6,8 @@ import HiddenSarch from './HiddenSarch.tsx';
 import BlurryLoading from './BlurryLoading.tsx';
 import ScrollAnimation from './ScrollAnimation.tsx';
 import Test from './Test.tsx';
+import SplitLandingPage from './SplitLandingPage.tsx';
+import FormInputWave from './FormInputWave.tsx';
 
 export function usePageNames() {
   // 使用 useMemo 来缓存页面信息，避免不必要的重新计算
@@ -16,6 +18,8 @@ export function usePageNames() {
     { name: 'HiddenSarch', path: '/day4', component: HiddenSarch },
     { name: 'BlurryLoading', path: '/day5', component: BlurryLoading },
     { name: 'ScrollAnimation', path: '/day6', component: ScrollAnimation },
+    { name: 'SplitLandingPage', path: '/day7', component: SplitLandingPage },
+    { name: 'FormInputWaveWrapper', path: '/day8', component: FormInputWave },
     { name: 'Test', path: '/test', component: Test },
   ], []) // 依赖数组为空表示此 memoized 值只会在组件挂载和卸载时计算
 

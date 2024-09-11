@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import Navigation2FiftyWrapper from './css/Navigation2FiftyStyled.js';
 import { usePageNames } from './usePageName.ts';
 
 export const Navigation2Fifty = () => {
   const pageNames = usePageNames()
+  const location = useLocation()
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
-  const handleClick = (index: number) => {
+  useEffect(() => {
+    const currentPath = location.pathname
+    const index = pageNames.findIndex(item => item.path === currentPath)
     setActiveIndex(index)
-  }
+  }, [location.pathname, pageNames])
 
   return (
     <Navigation2FiftyWrapper>
@@ -24,7 +27,6 @@ export const Navigation2Fifty = () => {
                 <Link
                   className={activeIndex === index ? 'isActive' : ''}
                   to={item.path}
-                  onClick={() => handleClick(index)}
                 >
                   {item.name}
                 </Link>
