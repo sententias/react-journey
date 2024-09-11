@@ -18,3 +18,9 @@ HiddenSarch：
 
 Loading：
   中间做的一个小页面，用于未加载完成时的遮罩，学到了cra创建的项目要读取本地文件时需要放在public文件夹下
+
+BlurryLoading：
+  整了一下git。
+  写了一个interval，发现interval的返回值可以写在自己的函数体里，解释是：“intervalId 在 setInterval 调用时被定义，并在回调函数内部可用。由于 JavaScript 的闭包特性，回调函数能够访问定义在其外部的变量（如 intervalId）”
+  使用了styled-components组件的参数传递
+

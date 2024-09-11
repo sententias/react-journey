@@ -9,6 +9,7 @@ const ExpandingCardWrapper = styled.div`
   }
 
   .mini-card {
+    user-select: none;
     /* width: 100px; */
     height: 300px;
     margin: 10px;

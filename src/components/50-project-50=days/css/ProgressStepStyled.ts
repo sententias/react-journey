@@ -14,6 +14,7 @@ const ProgressStepWrapper = styled.div`
     width: 50px;
     height: 50px;
     padding: 25px;
+    user-select: none;
     border: 5px solid grey;
     box-sizing: border-box;
     border-radius: 50px;
@@ -24,11 +25,13 @@ const ProgressStepWrapper = styled.div`
 
   .step {
     align-self: center;
+    user-select: none;
     transform: translateX(-50%);
   }
 
   .stick {
     flex: 1;
+    user-select: none;
     border: 2px solid grey;
     background-color: grey;
     height: 5px;
@@ -40,6 +43,7 @@ const ProgressStepWrapper = styled.div`
   .control-button {
     text-align: center;
     margin-top: 20px;
+    user-select: none;
   }
 
   .button {

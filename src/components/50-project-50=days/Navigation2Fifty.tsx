@@ -20,8 +20,10 @@ export class Navigation2Fifty extends PureComponent<
       pageNames: [
         { name: 'ExpandingCard', path: '/day1' },
         { name: 'ProgressStep', path: '/day2' },
-        { name: 'WrappedRotatingNavigationAnimation', path: '/day3' },
-        { name: 'WrappedHiddenSarch', path: '/day4' },
+        { name: 'RotatingNavigationAnimation', path: '/day3' },
+        { name: 'HiddenSarch', path: '/day4' },
+        { name: 'BlurryLoading', path: '/day5'},
+        { name: 'ScrollAnimation', path: '/day6'},
         { name: 'Test', path: '/test' },
       ],
       activeIndex: null

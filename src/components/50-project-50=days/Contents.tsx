@@ -8,6 +8,9 @@ import WrappedProgressStep from './ProgressStep.tsx'
 import WrappedRotatingNavigationAnimation from './RotatingNavigationAnimation.tsx'
 import WrappedHiddenSarch from './HiddenSarch.tsx'
 import Loading from './Loading.tsx'
+import WrappedBlurryLoading from './BlurryLoading.tsx'
+import ScrollAnimation from './ScrollAnimation.tsx'
+import Test from './Test.tsx'
 
 interface ContentsProps {}
 
@@ -33,7 +36,7 @@ export class Contents extends PureComponent<ContentsProps, ContentsState> {
           />
           <Route
             path='/day2'
-            element={<WrappedProgressStep/>}
+            element={<WrappedProgressStep />}
           />
           <Route
             path='/day3'
@@ -44,8 +47,16 @@ export class Contents extends PureComponent<ContentsProps, ContentsState> {
             element={<WrappedHiddenSarch />}
           />
           <Route
+            path='/day5'
+            element={<WrappedBlurryLoading />}
+          />
+          <Route
+            path='/day6'
+            element={<ScrollAnimation />}
+          />
+          <Route
             path='/test'
-            element={<Loading />}
+            element={<Test />}
           />
           <Route
             path='*'

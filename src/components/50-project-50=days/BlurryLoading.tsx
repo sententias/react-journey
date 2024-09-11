@@ -1,33 +1,52 @@
 import React, { PureComponent } from 'react'
-import BlurryLoadingWrapper from './css/BlurryLoading'
+import BlurryLoadingWrapper from './css/BlurryLoading.ts'
 
 interface BlurryLoadingProps {}
 
-interface BlurryLoadingState {}
+interface BlurryLoadingState {
+  progress: number
+}
 
-export class BlurryLoading extends PureComponent<BlurryLoadingProps, BlurryLoadingState> {
+export class BlurryLoading extends PureComponent<
+  BlurryLoadingProps,
+  BlurryLoadingState
+> {
   constructor(props: BlurryLoadingProps) {
     super(props)
 
-    this.state = {}
+    this.state = {
+      progress: 0
+    }
   }
+
+  componentDidMount(): void {
+    const intervalId = setInterval(() => {
+      this.setState((prevState) => {
+        if (prevState.progress >= 100) {
+          // 清除定时器
+          clearInterval(intervalId)
+        } else {
+          return {
+            progress: prevState.progress + 1
+          }
+        }
+      })
+    }, 20)
+  }
+
   render() {
     return (
-      <div>
-        <img alt='img' src='assrts/images/picture02.png'/>
-      </div>
+      <BlurryLoadingWrapper $progress={this.state.progress}>
+        <div className='img-box'>
+          <img
+            className='img-blur'
+            alt='img'
+            src='assets/images/picture02.jpg'
+          />
+        </div>
+      </BlurryLoadingWrapper>
     )
   }
 }
 
-function withBlurryLoadingWrapper(WrappedComponent: any) {
-  return (props: any) => (
-    <BlurryLoadingWrapper>
-      <WrappedComponent {...props} />
-    </BlurryLoadingWrapper>
-  )
-}
-
-const WrappedBlurryLoading = withBlurryLoadingWrapper(BlurryLoading)
-
-export default WrappedBlurryLoading
+export default BlurryLoading
