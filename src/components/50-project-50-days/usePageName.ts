@@ -22,6 +22,10 @@ import ThemeClock from './ThemeClock.tsx';
 import ToggleSwitch from '../widgets/ToggleSwitch.tsx';
 import ButtonRippleEffect from './ButtonRippleEffect.tsx';
 import DragNDrop from './DragNDrop.tsx';
+import DrawingApp from './DrawingApp.tsx';
+import KineticLoader from './KineticLoader.tsx';
+import ContentPlaceholder from './ContentPlaceholder.tsx';
+import StickyNavigation from './StickyNavigation.tsx';
 
 export function usePageNames() {
   // 使用 useMemo 来缓存页面信息，避免不必要的重新计算
@@ -47,6 +51,10 @@ export function usePageNames() {
     { name: 'ThemeClock',cName: '主题时钟', path: '/day19', component: ThemeClock },
     { name: 'ButtonRippleEffect',cName: '按钮涟漪效果', path: '/day20', component: ButtonRippleEffect },
     { name: 'DragNDrop',cName: '拖拽组件', path: '/day21', component: DragNDrop },
+    { name: 'DrawingApp',cName: '绘画软件', path: '/day22', component: DrawingApp },
+    { name: 'KineticLoader',cName: '加载动画', path: '/day23', component: KineticLoader },
+    { name: 'ContentPlaceholder',cName: '内容占位符', path: '/day24', component: ContentPlaceholder },
+    { name: 'StickyNavigation',cName: '粘性导航栏', path: '/day25', component: StickyNavigation },
     { name: 'Test',cName: '', path: '/test', component: Test },
   ], []) // 依赖数组为空表示此 memoized 值只会在组件挂载和卸载时计算
 

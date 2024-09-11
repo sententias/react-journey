@@ -2,43 +2,45 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
 const Test = () => {
-  const duration = 3000 
-  const [elements, setElements] = useState<{ id: number, createdAt: number }[]>([])
-  const [nextId, setNextId] = useState(1) 
-
-  const handleClick = () => {
-    const newElement = { id: nextId, createdAt: Date.now() }
-
-    setElements((prev) => [...prev, newElement])
-    setNextId((prev) => prev + 1)
-
-    setTimeout(() => {
-      setElements((prev) => prev.filter((el) => el.createdAt > Date.now() - duration))
-    }, duration)
-  }
-
   return (
     <TestWrapper>
-      <button onClick={handleClick}>Click me</button>
-      <div className='elements-container'>
-        {elements.map((el) => (
-          <div key={el.id} className="element">Element {el.id}</div>
-        ))}
+      <div className='content'>
+        {false ? (
+          <div>please wait...</div>
+        ) : (
+          <div className='holder-animation'></div>
+        )}
       </div>
     </TestWrapper>
   )
 }
 
 const TestWrapper = styled.div`
-  .element {
+  .content {
     width: 100px;
     height: 100px;
     background-color: skyblue;
-    margin: 10px;
-    display: inline-block;
-    text-align: center;
-    line-height: 100px;
-    border-radius: 5px;
+  }
+  @keyframes bgPos {
+    0% {
+      background-position: 50% 0;
+    }
+    100% {
+      background-position: -150% 0;
+    }
+  }
+
+  .holder-animation {
+    background-image: linear-gradient(
+      to right,
+      #f6f7f8 0%,
+      #edeef1 10%,
+      #f6f7f8 20%,
+      #f6f7f8 100%
+    );
+    background-size: 200% 100%;
+    animation: bgPos 1s linear infinite;
+    inset: 0;
   }
 `
 

@@ -6,7 +6,8 @@ const ContentsWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
+    background-color: rgb(230,230,230);
     
     color: rgb(110,110,110);
     font-size: 20px;

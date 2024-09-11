@@ -111,3 +111,16 @@ DragNDrop:
   复习了react hooks中不同组件之间props的传递方法。
   复习了CSS属性选择器。
   复习了React Hook插槽。
+
+DrawingApp:
+  画出来的线段不跟手，尝试自己指定x,y的坐标，发现x,y坐标很小的情况下线却在偏右下,在canvas的左上角画图，发现线段有偏移
+  发现问题在于我通过vw和vh动态设置了canvas元素的宽高，但canvas实际的宽高却没有动态改变,将canvas的width和height设置为他自己的clientHeight和clientWidth解决问题
+  console.dir()能够对HTMLElement元素的属性进行展开
+
+KineticLoader:
+  注意动画顺序，一开始把animation-delay写在前一个元素上导致动画很怪
+
+ContentPlaceholder:
+  完成了基本效果但不够满意，思考怎么让一个遮罩组件能完全遮盖父元素且不需要使用relative这种定位
+
+StickyNavigation:
