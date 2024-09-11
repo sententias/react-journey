@@ -18,6 +18,7 @@ export const Navigation2Fifty = () => {
     <Navigation2FiftyWrapper>
       <div className='nav2f'>
         <div className='nav-header'>
+          <img src='logo192.png' alt='logo'/>
           <h2>目录</h2>
         </div>
         <nav className='nav2f-nav'>

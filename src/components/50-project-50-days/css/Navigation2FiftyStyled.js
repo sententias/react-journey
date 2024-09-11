@@ -19,7 +19,11 @@ const Navigation2FiftyWrapper = styled.div`
   scrollbar-width: thin; /* 滚动条宽度 */
   scrollbar-color: #fff #444; /* thumb颜色和轨道颜色 */
 
-
+  img {
+    height: 50px;
+    display: inline;
+    user-select: none;
+  }
 
   ul {
     padding: 0;
@@ -42,6 +46,7 @@ const Navigation2FiftyWrapper = styled.div`
     border: 1px solid transparent; 
     transition: background-color 0.3s ease; 
     overflow-wrap: break-word; 
+    user-select: none;
   }
 
   a:hover {
@@ -49,15 +54,22 @@ const Navigation2FiftyWrapper = styled.div`
   }
 
   h2 {
+    flex: 1;
+    /* justify-self: center; */
+    align-self: center;
     color: #fff;
-    margin: 0;
+    margin: 0 auto;
+    display: inline;
     text-align: center;
+    transform: translateX(-10%);
+    user-select: none;
   }
 
   .nav-header {
     width: 200px;
     height:50px;
     background-color: #000;
+    display: flex;
   }
 
   .isActive {
