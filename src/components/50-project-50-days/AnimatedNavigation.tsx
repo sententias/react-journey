@@ -1,7 +1,6 @@
 // TODO 优化动画表现
 import React, { useState } from 'react'
 import AnimatedNavigationWrapper from './css/AnimatedNavigationWrapper.ts'
-import '../../assets/icon/iconfont.css'
 
 export const AnimatedNavigation = () => {
   const [menuActive,setMenuActive] = useState<boolean>(false)

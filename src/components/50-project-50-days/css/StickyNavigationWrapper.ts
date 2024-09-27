@@ -15,7 +15,7 @@ const StickyNavigationWrapper = styled.div<{$isScrolled: boolean}>`
     top: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    background-image: url('assets/images/picture11.png');
+    background-image: url('/assets/images/picture11.png');
     /* background-size: cover; */
     background-size: 100vw;
     display: flex;
@@ -48,7 +48,7 @@ const StickyNavigationWrapper = styled.div<{$isScrolled: boolean}>`
 
   .hero {
     height: 100vh;
-    background-image: url('assets/images/picture11.png');
+    background-image: url('/assets/images/picture11.png');
     background-position: 0 -3rem;
     /* background-size: cover; */
     background-size: 100vw;

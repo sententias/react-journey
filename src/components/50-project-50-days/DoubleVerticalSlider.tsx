@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import DoubleVerticalSliderWrapper from './css/DoubleVerticalSliderWrapper.ts'
-import '../../assets/icon/iconfont.css'
 
 export const DoubleVerticalSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const imgURL = [
-    'assets/images/picture01.png',
-    'assets/images/picture02.jpg',
-    'assets/images/picture03.jpg',
-    'assets/images/picture04.jpg'
+    '/assets/images/picture01.png',
+    '/assets/images/picture02.jpg',
+    '/assets/images/picture03.jpg',
+    '/assets/images/picture04.jpg'
   ]
 
   const nextImg = () => {

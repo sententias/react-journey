@@ -6,77 +6,84 @@ const Navigation2FiftyWrapper = styled.div`
   top: 0;
   height: 100%;
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   flex-direction: column;
-  background-color: gray;
-  width: 200px; 
-  /* padding: 20px;  */
+  background-color: white;
+  width: 15vw;
   box-sizing: border-box; /* 内边距和边框计入宽度和高度 */
-  border-right: 1px solid black; 
   z-index: 99;
   overflow-y: auto;
+  user-select: none;
 
-  /* 通用滚动条样式 */
-  scrollbar-width: thin; /* 滚动条宽度 */
-  scrollbar-color: #fff #444; /* thumb颜色和轨道颜色 */
 
-  img {
-    height: 50px;
-    display: inline;
-    user-select: none;
-  }
-
-  ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  li {
-    margin: 10px 0; 
-    width: 200px;
-    border: 1px solid #666;
-    background-color: #666;
-  }
-
-  a {
-    text-decoration: none;
-    color: white; 
-    padding: 5px;
-    display: block;
-    border: 1px solid transparent; 
-    transition: background-color 0.3s ease; 
-    overflow-wrap: break-word; 
-    user-select: none;
-  }
-
-  a:hover {
-    background-color: lightgray; 
-  }
-
-  h2 {
-    flex: 1;
-    /* justify-self: center; */
-    align-self: center;
-    color: #fff;
-    margin: 0 auto;
-    display: inline;
-    text-align: center;
-    transform: translateX(-10%);
-    user-select: none;
-  }
+  /* 滚动条宽度 */
+  scrollbar-width: thin; 
+  /* thumb颜色和轨道颜色 */
+  scrollbar-color: #1677ff #fff; 
 
   .nav-header {
-    width: 200px;
-    height:50px;
-    background-color: #000;
+    width: 14vw;
+    background-color: #fff;
     display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 2rem;
+    }
+
+    .title {
+      flex: 1;
+      color: #61dafb;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    i {
+      font-size: 1.5rem;
+      color: #61dafb;
+      cursor: pointer;
+      transition: color .5s ease-out;
+      width: 1.5rem;
+      &:hover{
+        color:#1677ff;
+      }
+    }
   }
 
-  .isActive {
-    background-color: darkmagenta;
-  }
+  .nav2f-content{
+    width: 14vw;
 
-  
+    .ant-menu-submenu-title{
+      border: 1px solid lightgray;
+      &[aria-expanded='true']{
+        border-color: #1890ff;
+      }
+    }
+
+    
+    .ant-menu-item {
+      border: 1px solid lightgray;
+
+      &.ant-menu-item-active {
+        border-color: #1890ff;
+        background-color: #e6f4ff;
+      }
+
+      &.ant-menu-item-selected {
+        border-color: #1890ff;
+      }
+
+      .menu-link {
+        &:hover {
+          color: #1677ff;
+        }
+      }
+    }
+
+
+  }
 `;
 
 export default Navigation2FiftyWrapper;

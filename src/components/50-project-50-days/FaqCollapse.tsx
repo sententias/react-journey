@@ -1,7 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import FaqCollapseWrapper from './css/FaqCollapseWrapper.ts'
 import styled from 'styled-components'
-import '../../assets/icon/iconfont.css'
 
 export const FaqCollapse = () => {
   return (

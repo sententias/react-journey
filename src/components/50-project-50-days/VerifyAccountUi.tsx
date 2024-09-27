@@ -3,9 +3,8 @@ import VerifyAccountUiWrapper from './css/VerifyAccountUiWrapper.ts';
 
 const VERIFY_LENGTH = 6;
 
-export const VerifyAccountUi = ({ email }) => {
+export const VerifyAccountUi = ({ email = 'koveer@163.com' }) => {
   const inputsRef = useRef<HTMLInputElement[]>([]);
-  email = 'koveer@163.com';
 
   const numberInput = (e, index) => {
     const { value } = e.target;

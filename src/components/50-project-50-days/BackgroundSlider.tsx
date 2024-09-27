@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import BackgroundSliderWrapper from './css/BackgroundSliderWrapper.ts'
-import '../../assets/icon/iconfont.css'
 
 export const BackgroundSlider = () => {
   const [imageUrlArray] = useState([
-    'assets/images/picture10.png',
-    'assets/images/picture11.png',
-    'assets/images/picture13.jpg'
+    '/assets/images/picture10.png',
+    '/assets/images/picture11.png',
+    '/assets/images/picture13.jpg'
   ])
   const [imageActiveIndex, setImageActiveIndex] = useState(0)
 

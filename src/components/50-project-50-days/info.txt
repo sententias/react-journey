@@ -197,7 +197,7 @@ PasswordStrengthBackground:
   由于filter:blur()对所有子元素也生效，通过伪元素来实现背景模糊的效果，background: inherit;可以直接继承父元素的背景。
 
 3dBackgroundBoxes:
-  暂时没实现，由于要和精灵图一样定位背景元素的位置，有点麻烦。
+  基本实现。
 
 VerifyAccountUi:
   使用inputtype=text和maxlength限制每个框只能输入一个字符，通过双向绑定和正则表达式保证输入框只能输入数字，
@@ -230,3 +230,15 @@ TodoList:
 
 InsectCatchGame:
   暂时没实现，思路很简单，就是给i元素一个随机的transform，并且onclick的时候移除自身，增加i元素的数量。
+
+<br/>
+
+项目开发问题:
+
+1.通过react脚手架create-react-app创建的项目，如果没有执行eject命令的话 是不会暴露配置文件的 这个时候就需要 用到 customize-cra 和 react-app-rewired插件
+ >https://blog.csdn.net/qq_40629521/article/details/110517762
+  * react-app-rewired：允许你覆盖 CRA 的默认配置，而不需要 eject。它通过修改 package.json 中的 scripts 部分，将原本的 react-scripts 替换为 react-app-rewired，并利用 config-overrides.js 文件来定制配置。
+  * customize-cra：与 react-app-rewired 配合使用，提供了更简洁的 API 来修改 CRA 配置，比如添加 Babel 插件或调整 Webpack 配置。它让配置的自定义更为直接和简单。
+  `npm install react-app-rewired customize-cra --save-dev`
+
+  https://www.jianshu.com/p/568832790592

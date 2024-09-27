@@ -66,7 +66,7 @@ const DragImg: React.FC<DragImgProps> = ({ index }) => {
       ref={dragRef}
       className='img'
       style={{
-        backgroundImage: `url('assets/images/minilogo.png')`,
+        backgroundImage: `url('/assets/images/minilogo.png')`,
         // 拖动时隐藏
         opacity: isDragging ? 0 : 1
       }}

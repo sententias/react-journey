@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react'
 import DoubleClickHeartWrapper from './css/DoubleClickHeartWrapper.ts'
-import '../../assets/icon/iconfont.css'
 
 interface Pointer {
   x: number
@@ -38,7 +37,7 @@ export const DoubleClickHeart = () => {
       <h2>双击喜欢</h2>
       <div
         className='pic'
-        style={{ backgroundImage: `url(assets/images/picture05.png)` }}
+        style={{ backgroundImage: `url(/assets/images/picture05.png)` }}
         onMouseDown={ClickHeart}
         ref={picRef}
       >

@@ -41,7 +41,7 @@ export class BlurryLoading extends PureComponent<
           <img
             className='img-blur'
             alt='img'
-            src='assets/images/picture02.jpg'
+            src='/assets/images/picture02.jpg'
           />
         </div>
       </BlurryLoadingWrapper>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ContentPlaceholderWrapper from './css/ContentPlaceholderWrapper.ts'
-import '../widgets/HolderAnimation.css'
+import '@/components/widgets/HolderAnimation.css'
 
 export const ContentPlaceholder = () => {
   const [isWait, setWait] = useState(true)

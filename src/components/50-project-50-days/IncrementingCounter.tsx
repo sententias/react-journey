@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import IncrementingCounterWrapper from './css/IncrementingCounterWrapper.ts'
-import '../../assets/icon/iconfont.css'
 
 export const IncrementingCounter = () => {
   const [googleUser,setGoogleUser] = useState(0)

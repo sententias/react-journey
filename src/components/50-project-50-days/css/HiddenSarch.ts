@@ -29,7 +29,7 @@ const HiddenSearchWrapper = styled.div`
     padding: 0px;
     transition: width 0.7s ease, opacity 0.3s ease, visibility 0.7s ease, border 0.1s ease;
     border-radius: 5px;
-    border: black 0px solid;
+    border: none;
     box-sizing: border-box;
     font-size: smaller;
   }
@@ -37,15 +37,16 @@ const HiddenSearchWrapper = styled.div`
   .search-content::placeholder {
     color: #bbb;
     font-size: smaller;
+    
   }
 
   .search-content.active {
     margin: 5px;
     width: 200px;
     padding: 10px 2px;
-    border: black 1px solid;
     visibility: visible; /* 显示元素 */
     opacity: 1; /* 使元素不透明 */
+    outline: none;
   }
 `
 

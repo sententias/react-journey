@@ -83,7 +83,7 @@ export const Pokedex = () => {
               className='image'
               // 目前有个问题是如果图片没加载完成，那么一个元素都不会渲染，后期想办法改正，暂且先使用本地图片代替
               // style={{ '--bgc': `url(${item.imageURL})` } as CSSProperties}
-              style={{ '--bgc': `url('assets/images/logo.png')` } as CSSProperties}
+              style={{ '--bgc': `url('/assets/images/logo.png')` } as CSSProperties}
             ></div>
             <div className='id'>#{item.id}</div>
             <div className='name'>{item.name}</div>

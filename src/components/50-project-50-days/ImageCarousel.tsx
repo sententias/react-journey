@@ -5,10 +5,10 @@ const DURATION = 2000;
 
 export const ImageCarousel = () => {
   const imgURL = [
-    'assets/images/picture01.png',
-    'assets/images/picture02.jpg',
-    'assets/images/picture03.jpg',
-    'assets/images/picture04.jpg'
+    '/assets/images/picture01.png',
+    '/assets/images/picture02.jpg',
+    '/assets/images/picture03.jpg',
+    '/assets/images/picture04.jpg'
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);

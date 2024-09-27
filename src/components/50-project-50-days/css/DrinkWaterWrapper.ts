@@ -3,9 +3,8 @@ import styled from 'styled-components'
 const DrinkWaterWrapper = styled.div<{precent: number}>`
   display: flex;
   flex-direction: column;
-  align-self: start;
+  /* align-self: start; */
   align-items: center;
-  justify-content: flex-start;
   gap: 15px;
 
   .total-water {

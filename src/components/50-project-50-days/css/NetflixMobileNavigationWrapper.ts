@@ -11,10 +11,14 @@ const NetflixMobileNavigationWrapper = styled.div`
   .logo {
     width: 20vw;
     height: 15vh;
-    background-image: url('assets/images/logo.png');
+    background-image: url('/assets/images/logo.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  .icon-a-zhongyingwenyingwen{
+    font-size: 3rem;
   }
 
   .icon-caidan {
@@ -85,7 +89,7 @@ const NetflixMobileNavigationWrapper = styled.div`
 
       .logo {
         width: 60%;
-        background-image: url('assets/images/logo.png');
+        background-image: url('/assets/images/logo.png');
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;

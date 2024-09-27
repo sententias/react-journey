@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import ThemeClockWrapper from './css/ThemeClockWrapper.ts'
-import '../../assets/icon/iconfont.css'
 
 interface CSSProperties {
   [key: `--${string}`]: string | number

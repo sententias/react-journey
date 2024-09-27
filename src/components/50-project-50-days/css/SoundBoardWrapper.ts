@@ -1,10 +1,17 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const SoundBoardWrapper = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
   width: 100vw;
+
+  .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   .card {
     flex: 1;
@@ -19,6 +26,6 @@ const SoundBoardWrapper = styled.div`
     cursor: pointer;
     user-select: none;
   }
-`
+`;
 
-export default SoundBoardWrapper
+export default SoundBoardWrapper;

@@ -18,7 +18,7 @@ const SplitLandingPageWrapper = styled.div`
 
   .left {
     background-color: #bbb;
-    background-image: url('assets/images/picture04.jpg');
+    background-image: url('/assets/images/picture04.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     transition: flex 0.5s ease-in;
@@ -42,7 +42,7 @@ const SplitLandingPageWrapper = styled.div`
 
   .right {
     background-color: skyblue;
-    background-image: url('assets/images/picture05.png');
+    background-image: url('/assets/images/picture05.png');
     background-repeat: no-repeat;
     background-size: cover;
     transition: flex 0.5s ease-in;

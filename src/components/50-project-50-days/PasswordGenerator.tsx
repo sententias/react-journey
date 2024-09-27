@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react'
 import PasswordGeneratorWrapper from './css/PasswordGeneratorWrapper.ts'
-import '../../assets/icon/iconfont.css'
 
 export const PasswordGenerator = () => {
   const [length, setLength] = useState(20)
